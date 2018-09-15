@@ -30,7 +30,7 @@ time_series_stk = ts(stock_monthly,start = c(1995,1),frequency = 12) # convertin
 stock_close<-time_series_stk[,4] #selecting only close values
 
 ###################### PLOT THE DATA ########################################################
-x1="Apple"
+x1="MICROSOFT"
 plot(stock_close, xlab='Years', ylab = 'Stock_Close',main= c(x1,"STOCK CLOSE PRICE IN LAST 20 YEARS"), type="l", lwd=2, col="red",xlim=c(1995,2019),axes=F)
 axis(1,at=1995:2020,labels=1995:2020);axis(2);box()
 
@@ -40,7 +40,7 @@ close_clean_data<-tsclean(stock_close)
 close_log_data=log(close_clean_data)
 
 #plotting clean data
-plot(close_clean_data, xlab='Years', ylab = 'stock_Close',main="CLEANED STOCK_CLOSE DATA", type="l", lwd=2, col="red",xlim=c(1995,2019),axes=F)
+plot(close_clean_data, xlab='Years', ylab = 'stock_Close',main=main= c(x1,"CLEANED STOCK_CLOSE DATA"), type="l", lwd=2, col="red",xlim=c(1995,2019),axes=F)
 axis(1,at=1995:2020,labels=1995:2020);axis(2);box()
 
 #################### PREREQUISITE OF ARIMA MODELLING ########################################
