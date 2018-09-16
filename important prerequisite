@@ -1,0 +1,2 @@
+Please make sure that your stock data's date column must be of type "Date" if not please convert it using as.Date() function
+There shuld not be any character column or factor column in data
